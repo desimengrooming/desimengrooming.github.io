@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="en"><head><title>Hair Care</title><style>
+
+body{
+font-family:Arial;
+background:linear-gradient(135deg,#0f2c67,#3a5fd9);
+margin:0;
+padding:40px;
+color:white;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+}
+
+.title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.articles{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.article{
+background:white;
+color:black;
+border-radius:12px;
+padding:15px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.article img{
+width:100%;
+height:auto;
+border-radius:10px;
+}
+
+.article{
+text-align:center;
+}
+
+#searchInput{
+width:60%;
+padding:12px;
+border-radius:25px;
+border:none;
+margin:20px auto 40px auto;
+display:block;
+font-size:16px;
+text-align:center;
+}
+
+.article{
+transition:0.3s;
+}
+
+.article:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
+
+.read-btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 16px;
+background:#ffd54f;
+color:black;
+border-radius:20px;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+}
+
+.read-btn:hover{
+background:#ffca28;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.home-btn, .back-btn {
+  text-decoration: none;
+  padding: 6px 12px;
+  background: white;
+  border-radius: 15px;
+  color: #333;
+  font-size: 13px;
+}
+
+</style></head>
+<body>
+<div class="container">
+
+  <!-- Navigation Buttons -->
+ <div class="nav-buttons">
+  <a href="../index.html" class="home-btn">🏠 Home</a>
+</div>
+
+
+<h1 class="title">Hair Care</h1>
+<input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()">
+
+<div class="articles">
+
+<div class="article">
+<h3>5 Hair Care Tips Every Man Should Know</h3>
+<a href="haircare/haircare-tips.html" class="Click here">Read More</a>
+</div>
+
+<div class="article">
+<h3>This one habit is killing your hair</h3>
+<a href="haircare/onehabit-tips.html" class="Click here">Read More</a>
+</div>
+
+
+</div>
+
+</div>
+<script>
+
+function searchArticles() {
+
+let input = document.getElementById("searchInput").value.toLowerCase();
+
+let articles = document.querySelectorAll(".article");
+
+articles.forEach(function(article){
+
+let text = article.innerText.toLowerCase();
+
+if(text.includes(input)){
+article.style.display="block";
+}else{
+article.style.display="none";
+}
+
+});
+
+}
+
+</script>
+</body>
+</html>
