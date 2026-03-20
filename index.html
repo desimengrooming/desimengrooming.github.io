@@ -260,12 +260,47 @@ body {
   border-radius: 30px;
   text-decoration: none;
 }
+
+.hero img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+}
+
+.hero-text p {
+  font-size: 18px;
+}
+
+/* 🔥 MOBILE FIX */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero img {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+}
    
         </style>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
     <div class="container">
        <header class="top-header">
