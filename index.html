@@ -29,7 +29,8 @@ html, body {
 }
 
 body {
-  background: #f5f5f5;   /* light luxury grey */
+  background: #f5f5f5;
+  padding-top: 60px;   /* light luxury grey */
 }
 .container {
   width: 100%;
@@ -89,14 +90,26 @@ body {
 }
 
 .top-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 9999;
+  transition: transform 0.3s ease;
+
+
   background: #fff;
   padding: 14px 20px;
   border-bottom: 1px solid #eee;
 
   display: flex;
-  justify-content: flex-start;   /* LEFT ALIGN */
+  justify-content: space-between; /* better */
   align-items: center;
+}
+
+
+#menu-toggle:checked ~ .container .side-menu {
+  transform: translateX(0);
 }
 
 .brand {
@@ -383,28 +396,27 @@ body {
 
 /* hamburger */
 .menu-icon {
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  font-size: 26px;
-  cursor: pointer;
-  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* SIDE MENU */
 .side-menu {
   position: fixed;
   top: 0;
-  left: -280px;
+  left: 0;
   width: 260px;
   height: 100%;
   background: #f5f5f5;
-  padding: 25px;
 
-  transition: left 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateX(-100%);
+  transition: 0.4s ease;
+  
 
-  z-index: 1000;
+  z-index: 10000;
 }
+
 /* SHOW MENU */
 #menu-toggle:checked ~ .side-menu {
   left: 0;
@@ -421,7 +433,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
-  z-index: 999;
+  z-index: 9999;
 }
 
 /* SHOW OVERLAY */
@@ -497,31 +509,33 @@ body {
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
-    <div class="container">
-       <header class="top-header">
-  <div class="brand">DESI MEN GROOMING</div>
+   <input type="checkbox" id="menu-toggle">
 
-  <label for="menu-toggle" class="menu-icon">☰</label>
-</header>
+<div class="container">
 
-<input type="checkbox" id="menu-toggle">
+  <header class="top-header">
+    <div class="brand">DESI MEN GROOMING</div>
 
-<div class="overlay"></div>
+    <!-- hamburger -->
+    <label for="menu-toggle" class="menu-icon">☰</label>
+  </header>
 
-<div class="side-menu">
+  <div class="overlay"></div>
 
-  <label for="menu-toggle" class="close-btn">✕</label>
+  <div class="side-menu">
+    <!-- close -->
+    <label for="menu-toggle" class="close-btn">✕</label>
 
-<h2 class="logo">
-  <span class="top">DESI MEN</span>
-  <span class="main">GROOMING</span>
-</h2>
+    <h2 class="logo">
+      <span class="top">DESI MEN</span>
+      <span class="main">GROOMING</span>
+    </h2>
 
-  <a href="#">Home</a>
-  <a href="#">About</a>
+    <a href="#">Home</a>
+    
 
   <div class="social">
-  <a href="desimen_grooming" target="_blank">
+  <a href="https://www.pinterest.com/desimen_grooming/" target="_blank"></a>
     <img src="https://cdn-icons-png.flaticon.com/512/145/145808.png" alt="Pinterest">
   </a>
 </div>
