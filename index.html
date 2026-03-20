@@ -230,12 +230,13 @@ body {
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* HERO SECTION */
 .hero {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 
   background-image: url('images/hero2.jpeg');
@@ -246,6 +247,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  margin: 0;
+  padding: 0;
 
   overflow: hidden;
 }
@@ -310,24 +314,26 @@ body {
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .hero {
-    height: 70vh; /* 🔥 reduced from 90vh */
+    height: 70vh;
     background-position: center 10%;
   }
 
   .hero-content {
+    position: absolute;
+    bottom: 10%;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     text-align: center;
     padding: 0 15px;
   }
 
   .hero-content h1 {
-    font-size: 26px;
+    font-size: 24px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
   }
 
   .hero-content p {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .overlay {
