@@ -30,7 +30,7 @@ html, body {
 
 body {
   background: #f5f5f5;
-  padding-top: 60px;   /* light luxury grey */
+  margin: 0;
 }
 .container {
   width: 100%;
@@ -43,7 +43,7 @@ body {
   margin-bottom: 20px;
   text-align: center;
   background: rgba(255,255,255,0.08);
-  border-radius: 15px;
+  border-radius: 0;
   backdrop-filter: blur(12px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
@@ -412,6 +412,8 @@ body {
 
   transform: translateX(-100%);
   transition: 0.4s ease;
+  padding: 60px 30px;
+  border-right: 1px solid #eee;
   
 
   z-index: 10000;
@@ -444,11 +446,9 @@ body {
 
 /* CLOSE BTN */
 .close-btn {
-  font-size: 22px;
-  cursor: pointer;
-  display: block;
-  text-align: right;
-  margin-bottom: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 /* LINKS */
@@ -458,6 +458,8 @@ body {
   text-decoration: none;
   color: black;
   font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 /* LOGO */
@@ -467,6 +469,7 @@ body {
   font-weight: 400;
   letter-spacing: 8px;
   color: #000;
+  margin-bottom: 30px;
 }
 
 .logo span {
@@ -476,12 +479,15 @@ body {
 }
 
 .social {
-  margin-bottom: 40px; /* control spacing easily */
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center; 
+  margin-top: 60px;
 }
 
 .social img {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   opacity: 0.8;
   transition: 0.3s;
 }
@@ -491,6 +497,27 @@ body {
   transform: scale(1.1);
 }
 
+.social svg {
+  stroke: #111;       /* black outline */
+  opacity: 0.8;
+  transition: 0.3s;
+  width: 28px;
+  height: 28px;
+}
+
+.social svg:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.social a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.social a:hover {
+  transform: scale(1.1);
+}
 
 /* smooth hide navbar when menu opens */
 .top-header {
@@ -531,12 +558,14 @@ body {
       <span class="main">GROOMING</span>
     </h2>
 
-    <a href="#">Home</a>
+    
     
 
   <div class="social">
-  <a href="https://www.pinterest.com/desimen_grooming/" target="_blank"></a>
-    <img src="https://cdn-icons-png.flaticon.com/512/145/145808.png" alt="Pinterest">
+  <a href="https://www.pinterest.com/desimen_grooming/" target="_blank">
+    <svg width="28" height="28" viewBox="0 0 24 24">
+      <path fill="#111" d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.16 6.84 9.49-.09-.81-.17-2.05.04-2.93l1.27-5.39s-.32-.64-.32-1.58c0-1.48.86-2.59 1.93-2.59.91 0 1.35.68 1.35 1.5 0 .91-.58 2.27-.88 3.53-.25 1.05.53 1.9 1.56 1.9 1.87 0 3.31-1.97 3.31-4.82 0-2.52-1.81-4.29-4.4-4.29-3 0-4.76 2.25-4.76 4.58 0 .91.35 1.88.79 2.41.09.11.1.21.07.32-.08.35-.26 1.05-.3 1.2-.05.2-.16.24-.37.14-1.38-.64-2.24-2.66-2.24-4.28 0-3.49 2.54-6.69 7.32-6.69 3.84 0 6.83 2.74 6.83 6.4 0 3.82-2.41 6.9-5.75 6.9-1.12 0-2.18-.58-2.54-1.26l-.69 2.63c-.25.96-.93 2.17-1.39 2.91 1.05.32 2.16.49 3.31.49 5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
+    </svg>
   </a>
 </div>
 </div>
@@ -620,7 +649,7 @@ body {
     <p>© 2026 Desi Men Grooming. All rights reserved.</p>
 
     <div class="footer-links">
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="privacy.html">Privacy Policy</a>|
       <a href="contact.html">Contact</a>
     </div>
   </div>
