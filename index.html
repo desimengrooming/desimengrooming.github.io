@@ -480,6 +480,16 @@ body {
 }
 
 
+/* smooth hide navbar when menu opens */
+.top-header {
+  transition: transform 0.3s ease;
+}
+
+/* hide navbar */
+#menu-toggle:checked ~ .top-header {
+  transform: translateY(-100%);
+}
+
         </style>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
@@ -490,15 +500,16 @@ body {
     <div class="container">
        <header class="top-header">
   <div class="brand">DESI MEN GROOMING</div>
+
+  <label for="menu-toggle" class="menu-icon">☰</label>
 </header>
 
 <input type="checkbox" id="menu-toggle">
 
-<label for="menu-toggle" class="menu-icon">☰</label>
-
 <div class="overlay"></div>
 
 <div class="side-menu">
+
   <label for="menu-toggle" class="close-btn">✕</label>
 
 <h2 class="logo">
