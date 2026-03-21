@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4 Shoes Every Man Should Own</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+/* TITLE */
+h1 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.sub {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 12px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* IMAGE CLICKABLE */
+.card a img {
+    width: 100%;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.card a img:hover {
+    transform: scale(1.03);
+}
+
+/* TEXT */
+.card p {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+/* BUTTON (AESTHETIC 🔥) */
+.buy-btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 22px;
+    background: linear-gradient(135deg, #ffb347, #ff8c00);
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 5px 12px rgba(255,140,0,0.4);
+    transition: 0.3s ease;
+}
+
+.buy-btn:hover {
+    transform: scale(1.05);
+}
+
+.back-btn {
+  position: fixed;        
+  top: 20px;              /* push down from top */
+  left: 20px;             /* spacing from left */
+  z-index: 1000;          /* always above content */
+  
+  background: #111;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.back-btn:hover {
+  background: #333;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* SMALL TEXT */
+.note {
+    font-size: 12px;
+    color: gray;
+    margin-top: 5px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+  <a href="../fashion.html" class="back-btn">⬅ Back</a>
+</div>
+
+<h1>4 Shoes Every Man Should Own 👟</h1>
+<p class="sub">Best picks for every style • Limited deals ⚡</p>
+
+<div class="grid">
+
+    <!-- Shoe 1 -->
+    <div class="card">
+        <a href="https://www.amazon.in/dp/B0BSLJBJ3N?tag=desimengroomi-21" target="_blank">
+            <img src="../images/shoe-a1.jpeg">
+        </a>
+        <p>White Sneakers</p>
+        <a href="https://www.amazon.in/dp/B0BSLJBJ3N?tag=desimengroomi-21" target="_blank" class="buy-btn">Buy Now 🔥</a>
+        <div class="note">Top choice</div>
+    </div>
+
+    <!-- Shoe 2 -->
+    <div class="card">
+        <a href="https://www.amazon.in/dp/B09DXHL4SL?tag=desimengroomi-21" target="_blank">
+            <img src="../images/shoe-a2.jpeg">
+        </a>
+        <p>Loafers</p>
+        <a href="https://www.amazon.in/dp/B09DXHL4SL?tag=desimengroomi-21" target="_blank" class="buy-btn">Buy Now 🔥</a>
+        <div class="note">Premium look</div>
+    </div>
+
+    <!-- Shoe 3 -->
+    <div class="card">
+        <a href="https://www.amazon.in/dp/B0FG2MZ6Q9?tag=desimengroomi-21" target="_blank">
+            <img src="../images/shoe-a3.jpeg">
+        </a>
+        <p>High Top Sneakers</p>
+        <a href="https://www.amazon.in/dp/B0FG2MZ6Q9?tag=desimengroomi-21" target="_blank" class="buy-btn">Buy Now 🔥</a>
+        <div class="note">Trending</div>
+    </div>
+
+    <!-- Shoe 4 -->
+    <div class="card">
+        <a href="https://www.amazon.in/dp/B09RGJCVW6?tag=desimengroomi-21" target="_blank">
+            <img src="../images/shoe-a4.jpeg">
+        </a>
+        <p>Sports Shoes</p>
+        <a href="https://www.amazon.in/dp/B09RGJCVW6?tag=desimengroomi-21" target="_blank" class="buy-btn">Buy Now 🔥</a>
+        <div class="note">Daily comfort</div>
+    </div>
+
+</div>
+
+</body>
+</html>

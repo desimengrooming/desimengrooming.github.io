@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Men Fashion - Desi Men Grooming</title>
+<title>Men Fashion</title>
 
 <style>
 
@@ -10,7 +9,13 @@ body {
   font-family: Arial, sans-serif;
   background: #f5f5f5;
   margin: 0;
-  padding: 20px;
+  padding: 30px;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: auto;
 }
 
 /* NAV */
@@ -30,22 +35,64 @@ body {
 /* TITLE */
 .title {
   text-align: center;
-  color: #111;
-  font-size: 36px;
   margin-bottom: 30px;
+  font-size: 34px;
+  color: #111;
 }
 
-/* PINTEREST */
-.gallery {
-  display: flex;
-  justify-content: center;
-}
-
-/* COMING TEXT */
-.section-title {
+/* SEARCH */
+#searchInput {
+  width: 60%;
+  padding: 12px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  margin: 20px auto 40px;
+  display: block;
+  font-size: 16px;
   text-align: center;
-  margin-top: 40px;
-  color: #666;
+}
+
+/* GRID */
+.articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* CARD */
+.article {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* TITLE */
+.article h3 {
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+.read-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 18px;
+  background: #111;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.read-btn:hover {
+  background: #333;
 }
 
 </style>
@@ -53,27 +100,50 @@ body {
 
 <body>
 
+<div class="container">
+
 <!-- NAV -->
 <div class="nav-buttons">
   <a href="../index.html" class="home-btn">🏠 Home</a>
 </div>
 
-<!-- TITLE -->
-<h1 class="title">Men's Fashion</h1>
+<h1 class="title">Men Fashion</h1>
 
-<!-- PINTEREST -->
-<div class="gallery">
-  <a data-pin-do="embedBoard"
-     data-pin-scale-width="80"
-     data-pin-scale-height="200"
-     data-pin-board-width="400"
-     href="https://www.pinterest.com/desimen_grooming/men-fashion/">
-  </a>
+<input type="text" id="searchInput" placeholder="Search ..." onkeyup="searchArticles()">
+
+<div class="articles">
+
+<div class="article">
+<h3>4 shoes every man should own</h3>
+<a href="fashion/shoe-a.html" class="read-btn">Explore</a>
 </div>
 
-<h2 class="section-title">More content coming soon...</h2>
 
-<script async defer src="https://assets.pinterest.com/js/pinit.js"></script>
+
+</div>
+
+</div>
+
+<script>
+function searchArticles() {
+
+let input = document.getElementById("searchInput").value.toLowerCase();
+let articles = document.querySelectorAll(".article");
+
+articles.forEach(function(article){
+
+let text = article.innerText.toLowerCase();
+
+if(text.includes(input)){
+article.style.display="";
+}else{
+article.style.display="none";
+}
+
+});
+
+}
+</script>
 
 </body>
 </html>
